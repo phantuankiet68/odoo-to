@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import { Provider, useSelector } from 'react-redux';
+import { ROUTES } from './constant/ROUTES';
+import store from './store';
+// Home
+import Dashboard from './pages/admin/dashboard/index';
+import Sidebar from './component/Sidebar/index'
+import Header from './component/Header/index'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+        <Sidebar/>
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+          <Header/>
+        </div>
+      </div>
+      <Routes>
+        <Route exact path={ROUTES.DASHBOARD} element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+const ConnectedApp = () => (
+  <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+  </Provider>
+);
+
+export default ConnectedApp;
