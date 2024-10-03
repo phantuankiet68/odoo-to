@@ -36,13 +36,12 @@ function Sidebar() {
                 </div>
             </div>
             <div className="collapse navbar-collapse" id="sidebarCollapse">
-
                 <MenuSideBar/>
                 <hr className="navbar-divider my-5 opacity-20" />
                 <div className="mt-auto"></div>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" href="/logout" onclick="return confirm('Are you sure you want to logout?')">
+                        <a className="nav-link" href="/logout" >
                             <i className="bi bi-box-arrow-left"></i> Logout
                         </a>
                     </li>

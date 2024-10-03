@@ -1,10 +1,11 @@
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
 
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import { ROUTES } from './constant/ROUTES';
 import store from './store';
 // Home
@@ -16,15 +17,15 @@ import './App.css';
 function App() {
   return (
     <div className="wrapper">
-      <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+      <div className="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
         <Sidebar/>
-        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+        <div className="h-screen flex-grow-1 overflow-y-lg-auto">
           <Header/>
+          <Routes>
+            <Route exact path={ROUTES.DASHBOARD} element={<Dashboard />} />
+          </Routes>
         </div>
       </div>
-      <Routes>
-        <Route exact path={ROUTES.DASHBOARD} element={<Dashboard />} />
-      </Routes>
     </div>
   );
 }

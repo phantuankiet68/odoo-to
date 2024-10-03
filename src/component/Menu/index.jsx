@@ -23,22 +23,6 @@ const MenuSidebar = () => {
                     <i className="bi bi-house"></i> Quản trị
                 </a>
             </li>
-            <li className="nav-item">
-                <a className="nav-link" href="/calendar">
-                    <i className="bi bi-calendar"></i> Calendar
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="/chat">
-                    <i className="bi bi-chat"></i> Tin nhắn
-                    <span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="/user">
-                    <i className="bi bi-people"></i> Người dùng
-                </a>
-            </li>
             <li className="nav-item dropdown">
                 <a 
                     className="nav-link dropdown-toggle" 
@@ -55,6 +39,22 @@ const MenuSidebar = () => {
                     <li><a className="dropdown-item" href="/posts/create">Tạo Post mới</a></li>
                     <li><a className="dropdown-item" href="/posts/manage">Quản lý Posts</a></li>
                 </ul>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/calendar">
+                    <i className="bi bi-calendar"></i> Calendar
+                </a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/chat">
+                    <i className="bi bi-chat"></i> Tin nhắn
+                    <span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
+                </a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/user">
+                    <i className="bi bi-people"></i> Người dùng
+                </a>
             </li>
             <li className="nav-item dropdown">
                 <a 
